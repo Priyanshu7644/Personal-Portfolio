@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Priyanshu Kumar - Full Stack Developer specializing in React, Node.js, and modern web technologies">
+    <meta name="keywords"
+        content="priyanshu kumar, portfolio, web developer, full stack, frontend, backend, react, nodejs">
+    <title>Priyanshu Kumar | Full Stack Developer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Particle Background (Disabled for cleaner UI) -->
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-logo">
+            <span class="logo-icon">P.</span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" class="nav-link active" title="Home"><i class="fas fa-home"></i></a></li>
+            <li><a href="#about" class="nav-link" title="About"><i class="fas fa-user"></i></a></li>
+            <li><a href="#skills" class="nav-link" title="Skills"><i class="fas fa-briefcase"></i></a></li>
+            <li><a href="#projects" class="nav-link" title="Projects"><i class="fas fa-folder"></i></a></li>
+            <li>
+                <!-- Education & Certifications Dropdown Container -->
+                <div class="sidebar-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" title="Education & Certifications" id="eduCertToggle">
+                        <i class="fas fa-graduation-cap"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="#education" class="dropdown-item"><i class="fas fa-book-open"></i> Education</a>
+                        <a href="#certifications" class="dropdown-item"><i class="fas fa-certificate"></i>
+                            Certifications</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#contact" class="nav-link" title="Contact"><i class="fas fa-envelope"></i></a></li>
+        </ul>
+        <div class="sidebar-social">
+            <a href="http://www.linkedin.com/in/priyanshu7644" target="_blank" title="LinkedIn"><i
+                    class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/Priyanshu7644" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+            <span class="hamburger"></span>
+        </button>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <main class="main-content">
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <div class="hero-intro">
+                    <h2 class="stagger-hi"><span class="yellow-text">H</span>i</h2>
+                    <h1 class="stagger-name">I'm <span class="stagger-box"></span>Priyanshu</h1>
+                    <h3 class="stagger-role">software developer.</h3>
+                </div>
+                <p class="hero-subline">
+                    B.Tech CSE / Full Stack Developer / LPU
+                </p>
+                <a href="#contact" class="btn btn-contact">CONTACT ME</a>
+            </div>
+
+            <!-- Animated Background Abstract Shape -->
+            <div class="bg-shape-container">
+                <div class="abstract-shape">
+                    <div class="shape-block block-top"></div>
+                    <div class="shape-block block-mid"></div>
+                    <div class="shape-block block-bottom"></div>
+                </div>
+            </div>
+            <div class="hero-scroll" id="heroScroll">
+                <a href="#about" class="scroll-indicator">
+                    <span>Scroll Down</span>
+                    <div class="scroll-icon">
+                        <div class="scroll-wheel"></div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="section-header" data-animate="fade-up">
+                    <span class="section-tag">Get to know me</span>
+                    <h2 class="section-title">About Me</h2>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-image" data-animate="fade-right">
+                        <div class="image-frame">
+                            <img src="profile_photo.jpg" alt="Priyanshu Kumar" class="profile-img">
+                            <div class="image-border"></div>
+                        </div>
+                        <div class="experience-badge">
+                            <span class="exp-number">8.01</span>
+                            <span class="exp-text">CGPA at LPU</span>
+                        </div>
+                    </div>
+
+                    <div class="about-text" data-animate="fade-left">
+                        <h3>B.Tech CSE Student & Full Stack Developer</h3>
+                        <p>
+                            I'm Priyanshu Kumar, a Computer Science student at Lovely Professional University
+                            with a passion for building digital products that are both beautiful and functional.
+                            I specialize in modern web technologies including React, Node.js, and databases like
+                            MongoDB and MySQL.
+                        </p>
+                        <p>
+                            My journey in tech is driven by curiosity and a love for problem-solving.
+                            I've completed certifications in Data Structures & Algorithms, Cloud Computing,
+                            and Artificial Intelligence. I'm also proud to have secured 19th rank in the
+                            Encrypt Edge CTF cybersecurity hackathon!
+                        </p>
+
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="5">0</span>
+                                <span class="stat-plus">+</span>
+                                <span class="stat-label">Projects Completed</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="3">0</span>
+                                <span class="stat-plus">+</span>
+                                <span class="stat-label">Certifications</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="19">0</span>
+                                <span class="stat-plus">th</span>
+                                <span class="stat-label">CTF Rank</span>
+                            </div>
+                        </div>
+
+                        <a href="Priyanshu_Kumar_CV.pdf" class="btn btn-primary" download>
+                            <span>Download CV</span>
+                            <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills" id="skills">
+            <div class="container">
+                <div class="section-header" data-animate="fade-up">
+                    <span class="section-tag">What I do</span>
+                    <h2 class="section-title">My Skills</h2>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Languages -->
+                    <div class="skill-category" data-animate="fade-up" data-delay="100">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>Programming Languages</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">C++</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">C</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">PHP</span>
+                                    <span class="skill-percent">70%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="70"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Frameworks -->
+                    <div class="skill-category" data-animate="fade-up" data-delay="200">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h3>Frameworks & Libraries</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML & CSS</span>
+                                    <span class="skill-percent">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">React.js</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Node.js</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Bootstrap</span>
+                                    <span class="skill-percent">88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="88"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Databases -->
+                    <div class="skill-category" data-animate="fade-up" data-delay="300">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3>Databases & Tools</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">MySQL</span>
+                                    <span class="skill-percent">82%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="82"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">MongoDB</span>
+                                    <span class="skill-percent">78%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="78"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Git & GitHub</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Problem Solving</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects" id="projects">
+            <div class="container">
+                <div class="section-header" data-animate="fade-up">
+                    <span class="section-tag">My Work</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 - Portfolio Website -->
+                    <div class="project-card" data-animate="fade-up" data-delay="100">
+                        <div class="project-image">
+                            <div class="image-placeholder project-placeholder">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" target="_blank" aria-label="View Live">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://github.com/Priyanshu7644" class="project-link" target="_blank"
+                                        aria-label="View Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Personal Portfolio Website</h3>
+                            <p class="project-description">
+                                Designed and developed a comprehensive personal portfolio showcasing
+                                technical skills and projects with responsive design and modern UI/UX principles.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">React.js</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 - Polling System Application -->
+                    <div class="project-card" data-animate="fade-up" data-delay="200">
+                        <div class="project-image">
+                            <div class="image-placeholder project-placeholder">
+                                <i class="fas fa-chart-pie"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" target="_blank" aria-label="View Live">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://github.com/Priyanshu7644" class="project-link" target="_blank"
+                                        aria-label="View Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Polling System Application</h3>
+                            <p class="project-description">
+                                Full-stack polling platform utilizing Express.js and MongoDB. Includes secure poll
+                                creation, OTP-based email verification, and responsive live voting results.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Express.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">REST APIs</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add more project placeholders for future projects -->
+                    <div class="project-card" data-animate="fade-up" data-delay="300">
+                        <div class="project-image">
+                            <div class="image-placeholder project-placeholder">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" target="_blank" aria-label="View Live">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="https://github.com/Priyanshu7644" class="project-link" target="_blank"
+                                        aria-label="View Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Real-time Chat Application</h3>
+                            <p class="project-description">
+                                A modern messaging application with real-time communication using
+                                Socket.io, username-based joining, and instant message delivery.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Socket.io</span>
+                                <span class="tech-tag">Express.js</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects-cta" data-animate="fade-up">
+                    <a href="https://github.com/Priyanshu7644" target="_blank" class="btn btn-secondary">
+                        <span>View All Projects</span>
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="experience" id="education">
+            <div class="container">
+                <div class="section-header" data-animate="fade-up">
+                    <span class="section-tag">My Background</span>
+                    <h2 class="section-title">Education</h2>
+                </div>
+
+                <div class="timeline">
+                    <!-- Education -->
+                    <div class="timeline-item" data-animate="fade-right" data-delay="100">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <span class="timeline-date">Aug 2023 - Present</span>
+                                <span class="timeline-badge">Current</span>
+                            </div>
+                            <h3 class="timeline-title">B.Tech - Computer Science & Engineering</h3>
+                            <h4 class="timeline-company">
+                                <i class="fas fa-university"></i>
+                                Lovely Professional University, Punjab
+                            </h4>
+                            <p class="timeline-description">
+                                Pursuing Bachelor of Technology in Computer Science with a strong
+                                focus on software development, data structures, and modern web technologies.
+                            </p>
+                            <div class="timeline-skills">
+                                <span>CGPA: 8.0</span>
+                                <span>DSA</span>
+                                <span>Web Dev</span>
+                                <span>Databases</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Intermediate -->
+                    <div class="timeline-item" data-animate="fade-left" data-delay="200">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <span class="timeline-date">Apr 2018 - Mar 2020</span>
+                            </div>
+                            <h3 class="timeline-title">Intermediate (12th)</h3>
+                            <h4 class="timeline-company">
+                                <i class="fas fa-school"></i>
+                                ST Judes Vidyalaya Phulwaria, Barauni, Bihar
+                            </h4>
+                            <p class="timeline-description">
+                                Completed intermediate education with 81% marks, building a strong
+                                foundation in science and mathematics.
+                            </p>
+                            <div class="timeline-skills">
+                                <span>81%</span>
+                                <span>Science</span>
+                                <span>Mathematics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Matriculation -->
+                    <div class="timeline-item" data-animate="fade-right" data-delay="300">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <span class="timeline-date">Apr 2016 - Mar 2018</span>
+                            </div>
+                            <h3 class="timeline-title">Matriculation (10th)</h3>
+                            <h4 class="timeline-company">
+                                <i class="fas fa-school"></i>
+                                D.A.V Public School H.F.C, Barauni, Bihar
+                            </h4>
+                            <p class="timeline-description">
+                                Completed matriculation with excellent 91% marks, developing strong
+                                analytical and problem-solving abilities.
+                            </p>
+                            <div class="timeline-skills">
+                                <span>91%</span>
+                                <span>Science</span>
+                                <span>Mathematics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications & Achievements Section -->
+        <section class="experience" id="certifications">
+            <div class="container">
+                <div class="section-header" data-animate="fade-up">
+                    <span class="section-tag">Continuous Learning</span>
+                    <h2 class="section-title">Certifications & Achievements</h2>
+                </div>
+
+                <div class="timeline" id="certs-timeline">
+                    <!-- Certification 1: Udemy Gen AI -->
+                    <div class="timeline-item" data-animate="fade-right" data-delay="100">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <span class="timeline-date">Aug 2025</span>
+                            </div>
+                            <h3 class="timeline-title">Master Generative AI Course</h3>
+                            <h4 class="timeline-company"><i class="fas fa-robot"></i> Udemy</h4>
+                            <p class="timeline-description">Credential ID: UC-e614d2ed-baea-4f2c-80a9-fd0e15293d1f</p>
+                            <div class="timeline-skills"><span>Artificial Intelligence (AI)</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Certification 2: Infosys Gen AI -->
+                    <div class="timeline-item" data-animate="fade-left" data-delay="200">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <span class="timeline-date">Aug 2025</span>
+                            </div>
+                            <h3 class="timeline-title">Master Generative AI & Tools</h3>
+                            <h4 class="timeline-company"><i class="fas fa-brain"></i> Infosys SpringBoard</h4>
+                            <div class="timeline-skills"><span>Artificial Intelligence (AI)</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Certification 3: Colorado Networking -->
+                    <div class="timeline-item" data-animate="fade-right" data-delay="300">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <span class="timeline-date">Sep 2024</span>
+                            </div>
+                            <h3 class="timeline-title">Fundamentals of Network Communication</h3>
+                            <h4 class="timeline-company"><i class="fas fa-network-wired"></i> University of Colorado
+                            </h4>
+                            <p class="timeline-description">Credential ID: NY117YYQ4LTB</p>
+                            <div class="timeline-skills"><span>Computer Networking</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Certification 4: IBM OS (Hidden initially) -->
+                    <div class="timeline-item cert-hidden" style="display: none;">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <span class="timeline-date">Sep 2024</span>
+                            </div>
+                            <h3 class="timeline-title">Intro to Hardware & Operating Systems</h3>
+                            <h4 class="timeline-company"><i class="fas fa-microchip"></i> IBM</h4>
+                            <p class="timeline-description">Credential ID: GCN91TBTZ8O7</p>
+                            <div class="timeline-skills"><span>Operating Systems</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Certification 5: Google Networking (Hidden initially) -->
+                    <div class="timeline-item cert-hidden" style="display: none;">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <span class="timeline-date">Sep 2024</span>
+                            </div>
+                            <h3 class="timeline-title">The Bits and Bytes of Computer Networking</h3>
+                            <h4 class="timeline-company"><i class="fab fa-google"></i> Google</h4>
+                            <p class="timeline-description">Credential ID: U840RVGTRH7M</p>
+                            <div class="timeline-skills"><span>Computer Networking</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Certification 6: Encrypt Edge CTF (Hidden initially) -->
+                    <div class="timeline-item cert-hidden" style="display: none;">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <span class="timeline-date">Jan 2024</span>
+                                <span class="timeline-badge" style="background: #f59e0b;">Achievement</span>
+                            </div>
+                            <h3 class="timeline-title">19th Rank - Capture The Flag (RCSCTF24)</h3>
+                            <h4 class="timeline-company"><i class="fas fa-trophy"></i> Encrypt Edge</h4>
+                            <div class="timeline-skills"><span>Cybersecurity</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Certification 7: freeCodeCamp (Hidden initially) -->
+                    <div class="timeline-item cert-hidden" style="display: none;">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <span class="timeline-date">Nov 2023</span>
+                            </div>
+                            <h3 class="timeline-title">Legacy Responsive Web Design V8</h3>
+                            <h4 class="timeline-company"><i class="fab fa-free-code-camp"></i> freeCodeCamp</h4>
+                            <p class="timeline-description">Credential ID: fcc65296cb0-beff-435c-96cc-6906853e9a88-rwd
+                            </p>
+                            <div class="timeline-skills"><span>HTML5</span><span>CSS</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Certification 8: Udemy AI Beginners (Hidden initially) -->
+                    <div class="timeline-item cert-hidden" style="display: none;">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <span class="timeline-date">Oct 2023</span>
+                            </div>
+                            <h3 class="timeline-title">AI for Beginners: Understand the basics</h3>
+                            <h4 class="timeline-company"><i class="fas fa-robot"></i> Udemy</h4>
+                            <div class="timeline-skills"><span>Artificial Intelligence (AI)</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Certification 9: CodingBlocks (Hidden initially) -->
+                    <div class="timeline-item cert-hidden" style="display: none;">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <span class="timeline-date">Sep 2023</span>
+                            </div>
+                            <h3 class="timeline-title">Associate</h3>
+                            <h4 class="timeline-company"><i class="fas fa-code"></i> CodingBlocks LPU</h4>
+                            <div class="timeline-skills"><span>Web Development</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-expand-container" style="text-align: center; margin-top: 40px;"
+                    data-animate="fade-up">
+                    <button class="btn btn-secondary" id="expandCertsBtn" style="min-width: 200px;">
+                        <span id="expandCertsText">Show More (6)</span>
+                        <i class="fas fa-chevron-down" id="expandCertsIcon"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section-header" data-animate="fade-up">
+                    <span class="section-tag">Get in Touch</span>
+                    <h2 class="section-title">Contact Me</h2>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-info" data-animate="fade-right">
+                        <h3>Let's work together</h3>
+                        <p>
+                            I'm always open to discussing new projects, creative ideas,
+                            or opportunities to be part of your visions. Feel free to
+                            reach out through any of the following channels.
+                        </p>
+
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Email</span>
+                                    <a href="mailto:Priyanshukr988@gmail.com">Priyanshukr988@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Phone</span>
+                                    <a href="tel:+917644972487">+91 76449 72487</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Location</span>
+                                    <span>Punjab, India (LPU)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-social">
+                            <span>Follow Me:</span>
+                            <div class="social-links">
+                                <a href="https://github.com/Priyanshu7644" target="_blank" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="http://www.linkedin.com/in/priyanshu7644" target="_blank"
+                                    aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper" data-animate="fade-left">
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" required placeholder=" ">
+                                <label for="name">Your Name</label>
+                                <span class="form-icon"><i class="fas fa-user"></i></span>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" required placeholder=" ">
+                                <label for="email">Your Email</label>
+                                <span class="form-icon"><i class="fas fa-envelope"></i></span>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" id="subject" name="subject" required placeholder=" ">
+                                <label for="subject">Subject</label>
+                                <span class="form-icon"><i class="fas fa-tag"></i></span>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                                <label for="message">Your Message</label>
+                                <span class="form-icon"><i class="fas fa-comment"></i></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <a href="#home" class="logo">
+                            <span class="logo-bracket">&lt;</span>
+                            <span class="logo-text">Priyanshu</span>
+                            <span class="logo-bracket">/&gt;</span>
+                        </a>
+                        <p>Building digital experiences that matter.</p>
+                    </div>
+
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-social">
+                        <h4>Connect</h4>
+                        <div class="social-links">
+                            <a href="https://github.com/Priyanshu7644" target="_blank" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="http://www.linkedin.com/in/priyanshu7644" target="_blank" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Priyanshu Kumar. All rights reserved.</p>
+                    <p>Made with <i class="fas fa-heart"></i> in India</p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom Cursor Highlighter -->
+    <div id="cursor-glow"></div>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "Kqx7ofpTunqHxENA-",
+            });
+        })();
+    </script>
+    <script src="particles.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
