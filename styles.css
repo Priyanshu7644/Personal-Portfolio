@@ -75,10 +75,10 @@ body {
     line-height: 1.7;
     overflow-x: hidden;
     position: relative;
-    cursor: url('data:image/svg+xml;utf8,<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><filter id="drop-shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="1" dy="2" stdDeviation="1.5" flood-opacity="0.5"/></filter></defs><path d="M 6,6 L 25,13 L 16,16 L 21,26 L 16,28 L 11,18 L 6,24 Z" fill="%23ffffff" stroke="%23333333" stroke-width="1.5" filter="url(%23drop-shadow)"/></svg>') 6 6, auto;
+    cursor: url('data:image/svg+xml;utf8,<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><filter id="drop-shadow2" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="1" dy="2" stdDeviation="1.5" flood-opacity="0.5"/></filter></defs><path d="M 12,8 L 22,18 L 16,19 L 17,26 L 14,27 L 13,20 L 8,24 Z" fill="%23ffffff" stroke="%23333333" stroke-width="1.5" filter="url(%23drop-shadow2)"/></svg>') 12 8, auto;
 }
 
-/* Custom interactive pointer cursor (Minimal pointer hand) */
+/* Custom interactive pointer cursor (Standard system pointer) */
 a,
 button,
 .btn,
@@ -86,7 +86,7 @@ button,
 .scroll-indicator,
 input,
 textarea {
-    cursor: url('data:image/svg+xml;utf8,<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><filter id="drop-shadow2" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="1" dy="2" stdDeviation="1.5" flood-opacity="0.5"/></filter></defs><path d="M 12,8 L 22,18 L 16,19 L 17,26 L 14,27 L 13,20 L 8,24 Z" fill="%23ffffff" stroke="%23333333" stroke-width="1.5" filter="url(%23drop-shadow2)"/></svg>') 12 8, pointer !important;
+    cursor: pointer !important;
 }
 
 .main-content {

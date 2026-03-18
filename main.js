@@ -569,7 +569,7 @@ function initExpandCerts() {
             btnText.innerText = 'Show Less';
             btnIcon.className = 'fas fa-chevron-up';
         } else {
-            btnText.innerText = 'Show More (6)';
+            btnText.innerText = 'Show More (11)';
             btnIcon.className = 'fas fa-chevron-down';
             // Scroll back to the top of the certifications section
             document.getElementById('certifications').scrollIntoView({ behavior: 'smooth' });
