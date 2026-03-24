@@ -631,21 +631,27 @@ function initSidebarDropdown() {
 const projectData = {
     portfolio: {
         title: "Personal Portfolio Website",
-        intro: "A modern, highly interactive portfolio featuring glassmorphism, responsive design, and dynamic themes.",
+        intro: "A modern, highly interactive portfolio featuring glassmorphism, responsive design, and dynamic themes. Engineered to showcase projects cleanly, emphasizing UI/UX best practices.",
+        tech: ["HTML5", "CSS3", "JavaScript", "React.js"],
+        github: "https://github.com/Priyanshu7644/Personal-Portfolio",
+        live: "#",
         images: [
-            "assets/project images/my portfolio/Screenshot (113).png",
-            "assets/project images/my portfolio/Screenshot (114).png",
-            "assets/project images/my portfolio/Screenshot (115).png"
+            "assets/project%20images/my%20portfolio/Screenshot%20(113).png",
+            "assets/project%20images/my%20portfolio/Screenshot%20(114).png",
+            "assets/project%20images/my%20portfolio/Screenshot%20(115).png"
         ]
     },
     polling: {
         title: "Polling System Application",
-        intro: "Full-stack polling platform utilizing Express.js and MongoDB with secure voting and live results.",
+        intro: "Full-stack polling platform utilizing Express.js and MongoDB with secure voting and live results. Includes JWT-based authentication, an intuitive dashboard, and an OTP email verification flow.",
+        tech: ["Node.js", "Express.js", "MongoDB", "REST APIs"],
+        github: "https://github.com/Priyanshu7644/polling-system",
+        live: "#",
         images: [
-            "assets/project images/polling system/Screenshot (142).png",
-            "assets/project images/polling system/Screenshot (143).png",
-            "assets/project images/polling system/Screenshot (144).png",
-            "assets/project images/polling system/Screenshot (145).png"
+            "assets/project%20images/polling%20system/Screenshot%20(142).png",
+            "assets/project%20images/polling%20system/Screenshot%20(143).png",
+            "assets/project%20images/polling%20system/Screenshot%20(144).png",
+            "assets/project%20images/polling%20system/Screenshot%20(145).png"
         ]
     }
 };
@@ -653,7 +659,7 @@ const projectData = {
 let currentProject = null;
 let currentImageIndex = 0;
 
-function openProjectModal(projectId) {
+window.openProjectModal = function(projectId) {
     const modal = document.getElementById('projectModal');
     const data = projectData[projectId];
     if (!data || !modal) return;
@@ -664,19 +670,44 @@ function openProjectModal(projectId) {
     document.getElementById('modalProjectTitle').innerText = data.title;
     document.getElementById('modalProjectIntro').innerText = data.intro;
     
+    // Inject Tech Stack
+    const techStack = document.getElementById('modalTechStack');
+    techStack.innerHTML = '';
+    if (data.tech) {
+        data.tech.forEach(tech => {
+            const span = document.createElement('span');
+            span.className = 'tech-tag';
+            span.innerText = tech;
+            techStack.appendChild(span);
+        });
+    }
+
+    // Inject Action Links
+    const actions = document.getElementById('modalActions');
+    actions.innerHTML = `
+        <a href="${data.live}" class="btn btn-primary" target="_blank">
+            <span>View Live</span>
+            <i class="fas fa-external-link-alt"></i>
+        </a>
+        <a href="${data.github}" class="btn btn-secondary" target="_blank">
+            <span>Source Code</span>
+            <i class="fab fa-github"></i>
+        </a>
+    `;
+    
     updateModalGallery();
     
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
-}
+};
 
-function closeProjectModal() {
+window.closeProjectModal = function() {
     const modal = document.getElementById('projectModal');
     if (modal) {
         modal.classList.remove('active');
         document.body.style.overflow = '';
     }
-}
+};
 
 function updateModalGallery() {
     if (!currentProject) return;
@@ -684,10 +715,9 @@ function updateModalGallery() {
     const imgElement = document.getElementById('modalGalleryImage');
     const dotsContainer = document.getElementById('modalGalleryDots');
     
-    // Update image
-    // Forcing a tiny delay ensures the browser re-triggers the fadeIn animation
+    // Trigger CSS animation reflow
     imgElement.style.animation = 'none';
-    imgElement.offsetHeight; /* trigger reflow */
+    void imgElement.offsetHeight; 
     imgElement.style.animation = null; 
     
     imgElement.src = currentProject.images[currentImageIndex];
@@ -712,7 +742,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextBtn = document.getElementById('galleryNextBtn');
     const modal = document.getElementById('projectModal');
     
-    if (closeBtn) closeBtn.addEventListener('click', closeProjectModal);
+    if (closeBtn) closeBtn.addEventListener('click', window.closeProjectModal);
     
     if (prevBtn) prevBtn.addEventListener('click', () => {
         if (!currentProject) return;
@@ -726,11 +756,10 @@ document.addEventListener('DOMContentLoaded', () => {
         updateModalGallery();
     });
     
-    // Close when clicking outside of modal content
     if (modal) {
         modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                closeProjectModal();
+            if (e.target === modal || e.target.classList.contains('modal-grid') || e.target.classList.contains('modal-gallery-wrapper')) {
+                window.closeProjectModal();
             }
         });
     }
