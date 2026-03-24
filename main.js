@@ -624,3 +624,114 @@ function initSidebarDropdown() {
         });
     });
 }
+
+/* ==========================================
+   Project Modal Logic
+   ========================================== */
+const projectData = {
+    portfolio: {
+        title: "Personal Portfolio Website",
+        intro: "A modern, highly interactive portfolio featuring glassmorphism, responsive design, and dynamic themes.",
+        images: [
+            "assets/project images/my portfolio/Screenshot (113).png",
+            "assets/project images/my portfolio/Screenshot (114).png",
+            "assets/project images/my portfolio/Screenshot (115).png"
+        ]
+    },
+    polling: {
+        title: "Polling System Application",
+        intro: "Full-stack polling platform utilizing Express.js and MongoDB with secure voting and live results.",
+        images: [
+            "assets/project images/polling system/Screenshot (142).png",
+            "assets/project images/polling system/Screenshot (143).png",
+            "assets/project images/polling system/Screenshot (144).png",
+            "assets/project images/polling system/Screenshot (145).png"
+        ]
+    }
+};
+
+let currentProject = null;
+let currentImageIndex = 0;
+
+function openProjectModal(projectId) {
+    const modal = document.getElementById('projectModal');
+    const data = projectData[projectId];
+    if (!data || !modal) return;
+    
+    currentProject = data;
+    currentImageIndex = 0;
+    
+    document.getElementById('modalProjectTitle').innerText = data.title;
+    document.getElementById('modalProjectIntro').innerText = data.intro;
+    
+    updateModalGallery();
+    
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeProjectModal() {
+    const modal = document.getElementById('projectModal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+function updateModalGallery() {
+    if (!currentProject) return;
+    
+    const imgElement = document.getElementById('modalGalleryImage');
+    const dotsContainer = document.getElementById('modalGalleryDots');
+    
+    // Update image
+    // Forcing a tiny delay ensures the browser re-triggers the fadeIn animation
+    imgElement.style.animation = 'none';
+    imgElement.offsetHeight; /* trigger reflow */
+    imgElement.style.animation = null; 
+    
+    imgElement.src = currentProject.images[currentImageIndex];
+    
+    // Update dots
+    dotsContainer.innerHTML = '';
+    currentProject.images.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.className = 'modal-dot ' + (index === currentImageIndex ? 'active' : '');
+        dot.onclick = () => {
+            currentImageIndex = index;
+            updateModalGallery();
+        };
+        dotsContainer.appendChild(dot);
+    });
+}
+
+// Attach event listeners for modal
+document.addEventListener('DOMContentLoaded', () => {
+    const closeBtn = document.getElementById('closeProjectModal');
+    const prevBtn = document.getElementById('galleryPrevBtn');
+    const nextBtn = document.getElementById('galleryNextBtn');
+    const modal = document.getElementById('projectModal');
+    
+    if (closeBtn) closeBtn.addEventListener('click', closeProjectModal);
+    
+    if (prevBtn) prevBtn.addEventListener('click', () => {
+        if (!currentProject) return;
+        currentImageIndex = (currentImageIndex - 1 + currentProject.images.length) % currentProject.images.length;
+        updateModalGallery();
+    });
+    
+    if (nextBtn) nextBtn.addEventListener('click', () => {
+        if (!currentProject) return;
+        currentImageIndex = (currentImageIndex + 1) % currentProject.images.length;
+        updateModalGallery();
+    });
+    
+    // Close when clicking outside of modal content
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeProjectModal();
+            }
+        });
+    }
+});

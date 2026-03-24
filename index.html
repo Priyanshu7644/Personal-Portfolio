@@ -327,8 +327,8 @@
                     <!-- Project 1 - Portfolio Website -->
                     <div class="project-card" data-animate="fade-up" data-delay="100">
                         <div class="project-image">
-                            <div class="image-placeholder project-placeholder">
-                                <i class="fas fa-user-circle"></i>
+                            <div class="image-placeholder project-placeholder" onclick="openProjectModal('portfolio')" style="cursor: pointer; overflow: hidden; padding: 0;">
+                                <img src="assets/project images/my portfolio/Screenshot (113).png" alt="Personal Portfolio" style="width: 100%; height: 100%; object-fit: cover;">
                             </div>
                             <div class="project-overlay">
                                 <div class="project-links">
@@ -360,8 +360,8 @@
                     <!-- Project 2 - Polling System Application -->
                     <div class="project-card" data-animate="fade-up" data-delay="200">
                         <div class="project-image">
-                            <div class="image-placeholder project-placeholder">
-                                <i class="fas fa-chart-pie"></i>
+                            <div class="image-placeholder project-placeholder" onclick="openProjectModal('polling')" style="cursor: pointer; overflow: hidden; padding: 0;">
+                                <img src="assets/project images/polling system/Screenshot (142).png" alt="Polling System" style="width: 100%; height: 100%; object-fit: cover;">
                             </div>
                             <div class="project-overlay">
                                 <div class="project-links">
@@ -393,8 +393,8 @@
                     <!-- Add more project placeholders for future projects -->
                     <div class="project-card" data-animate="fade-up" data-delay="300">
                         <div class="project-image">
-                            <div class="image-placeholder project-placeholder">
-                                <i class="fas fa-comments"></i>
+                            <div class="image-placeholder project-placeholder" style="overflow: hidden; padding: 0;">
+                                <img src="assets/project images/live chat/chat_home.png" alt="Live Chat" style="width: 100%; height: 100%; object-fit: cover;">
                             </div>
                             <div class="project-overlay">
                                 <div class="project-links">
@@ -872,6 +872,22 @@
             </div>
         </footer>
 
+        <!-- Project Modal -->
+        <div class="project-modal" id="projectModal">
+            <div class="modal-content">
+                <span class="close-modal" id="closeProjectModal">&times;</span>
+                <h2 id="modalProjectTitle" class="modal-title">Project Title</h2>
+                <p id="modalProjectIntro" class="modal-intro">Project intro goes here...</p>
+                <div class="modal-gallery-container">
+                    <button class="gallery-btn prev-btn" id="galleryPrevBtn"><i class="fas fa-chevron-left"></i></button>
+                    <div class="modal-gallery">
+                        <img id="modalGalleryImage" src="" alt="Project Screenshot">
+                    </div>
+                    <button class="gallery-btn next-btn" id="galleryNextBtn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="modal-dots" id="modalGalleryDots"></div>
+            </div>
+        </div>
     </main>
 
     <!-- Back to Top Button -->
